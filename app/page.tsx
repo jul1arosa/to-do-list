@@ -32,6 +32,7 @@ import {
 	DialogTitle,
 	DialogTrigger,
 } from "@/components/ui/dialog";
+import EditTask from "@/components/ui/edit-task";
 
 const Home = () => {
 	return (
@@ -68,24 +69,8 @@ const Home = () => {
 							<div className="w-1 h-full bg-green-300"></div>
 							<p className="flex-1 px-2 text-sm">Estudar React</p>
 							<div className="flex gap-2 items-center">
-								<Dialog>
-									<DialogTrigger asChild>
-										<SquarePen
-											size={16}
-											className="cursor-pointer bg-gray-100"
-										/>
-									</DialogTrigger>
-									<DialogContent>
-										<DialogHeader>
-											<DialogTitle>Editar tarefa</DialogTitle>
-										</DialogHeader>
+								<EditTask />
 
-										<div className="flex gap-2">
-											<Input placeholder="Editar tarefa" />
-											<Button className="cursor-pointer">Salvar</Button>
-										</div>
-									</DialogContent>
-								</Dialog>
 								<Trash size={16} className="cursor-pointer bg-gray-100" />
 							</div>
 						</div>
